@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Te amo </title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Te Amo Rain</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        overflow: hidden;
+        color: hotpink;
+        font-family: monospace;
+      }
+      .text {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 18px;
+        opacity: 0.8;
+        animation: fall linear infinite;
+      }
+      @keyframes fall {
+        0% {
+          transform: translateY(-100%);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(120vh);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const createFallingText = () => {
+        const text = document.createElement("div")
+        text.className = "text"
+        text.innerText = "TE AMO"
+        text.style.left = Math.random() * window.innerWidth + "px"
+        text.style.animationDuration = Math.random() * 3 + 2 + "s"
+        text.style.fontSize = Math.random() * 20 + 12 + "px"
+        document.body.appendChild(text)
+
+        setTimeout(() => {
+          text.remove()
+        }, 6000)
+      }
+
+      // Lluvia constante
+      setInterval(createFallingText, 100)
+
+      // Efecto al tocar
+      document.addEventListener("touchstart", (e) => {
+        for (let i = 0; i < 20; i++) {
+          setTimeout(createFallingText, i * 50)
+        }
+      })
+    </script>
+  </body>
+</html>
+
+
+  <script>
+    
+  </script>
+</body>
+</html>
